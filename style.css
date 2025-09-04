@@ -13,12 +13,18 @@ body {
     line-height: 1.6;
 }
 
+/* NAV */
 nav {
     background: #333;
     color: #ffffff;
     padding: 10px 0;
     text-align: end;
   }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+} 
 
 nav ul li {
     display: inline;
@@ -39,20 +45,24 @@ nav ul li a:hover {
     text-decoration:line-through
 }
 
+
+/* LAYOUT */
 .container {
     display: flex;
     flex-direction: row;
     margin-top: 16%;
     overflow: hidden;
-}
+    }
 
 .half {
-    flex: 1; /* cada metade ocupa igual */
+   flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
+    padding: 20px;
+    text-align: center;
 }
 
 .half h1 {
@@ -70,7 +80,7 @@ nav ul li a:hover {
     text-shadow: #333 0.5px 0.5px 1.5px;
 }
 
-
+/* MÁSCARA */
   .designer-mask {
     position: absolute;
     top: 0;
@@ -80,4 +90,34 @@ nav ul li a:hover {
     background: linear-gradient(78deg, #d45eba, #d9bc5d, #f9c74f, #a0dc73, #577590);
     mix-blend-mode: multiply;
     z-index: 1;
+    pointer-events: none; /* não bloqueia cliques */
   }
+
+  /* 📱 RESPONSIVIDADE */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column; /* empilha um embaixo do outro */
+        margin-top: 5%;
+    }
+
+    .half {
+        padding: 40px 20px;
+    }
+
+    .half h1 {
+        font-size: 1.6em;
+    }
+
+    .half p {
+        font-size: 1em;
+    }
+
+    nav {
+        text-align: center; /* centraliza menu no mobile */
+    }
+
+    nav ul li {
+        display: block; /* links um embaixo do outro */
+        margin: 10px 0;
+    }
+}
