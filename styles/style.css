@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=Fira+Code:wght@300..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -20,10 +21,10 @@ body {
     flex-direction: row;
     margin-top: 16%;
     overflow: hidden;
-    }
+}
 
 .half {
-   flex: 1;
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,12 +35,31 @@ body {
 }
 
 .half h1 {
-    margin-bottom: 20px;
     max-width: 900px;
     color: #333;
     text-align: center;
     font-weight: bold;
     font-size: 2em;
+    width: 38ch;
+    animation: typing 4s steps(38), pulse .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-size: 16px;
+    font-family: monospace;
+    margin: 0, auto, auto, 20;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes pulse {
+    50% {
+        border-color: transparent;
+    }
 }
 
 .half p {
@@ -49,7 +69,7 @@ body {
 }
 
 /* MÁSCARA */
-  .designer-mask {
+.designer-mask {
     position: absolute;
     top: 0;
     left: 0;
@@ -58,13 +78,15 @@ body {
     background: linear-gradient(78deg, #d45eba, #d9bc5d, #f9c74f, #a0dc73, #577590);
     mix-blend-mode: multiply;
     z-index: 1;
-    pointer-events: none; /* não bloqueia cliques */
-  }
+    pointer-events: none;
+    /* não bloqueia cliques */
+}
 
-  /* 📱 RESPONSIVIDADE */
+/* 📱 RESPONSIVIDADE */
 @media (max-width: 900px) {
     .container {
-        flex-direction: column; /* empilha um embaixo do outro */
+        flex-direction: column;
+        /* empilha um embaixo do outro */
         margin-top: 5%;
     }
 
@@ -81,11 +103,13 @@ body {
     }
 
     nav {
-        text-align: center; /* centraliza menu no mobile */
+        text-align: center;
+        /* centraliza menu no mobile */
     }
 
     nav ul li {
-        display: block; /* links um embaixo do outro */
+        display: block;
+        /* links um embaixo do outro */
         margin: 10px 0;
     }
 }
