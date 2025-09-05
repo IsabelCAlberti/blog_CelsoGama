@@ -27,7 +27,7 @@ nav {
 } 
 
 nav ul li {
-    display: inline;
+    display:inline;
     margin: 0 15px;
   
 }
@@ -36,13 +36,14 @@ nav ul li a {
     color: #ffffff;
     text-decoration: none;
     letter-spacing: 1px;
-    font-size: 14px;
+    font-size: 16px;
     position: relative; 
     z-index: 2;
 }
 
 nav ul li a:hover {
-    text-decoration:line-through
+    font-size: 18px;
+    color: #d45eba;
 }
 
 
