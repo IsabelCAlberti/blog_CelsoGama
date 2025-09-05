@@ -4,21 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/navbar.css">
     <title>Home | Portfólio Celso Gama</title>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home" target="_blank">Home</a></li>
-                <li><a href="planejamento.html" target="_blank" rel="noopener noreferrer">Planejamento de Aulas</a></li>
-                <li><a href="#atividades.html" target="_blank">Atividades</a></li>
-                <li><a href="#contato.html" target="_blank">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+<div id="header-placeholder"></div>
     <div class="container">
         <div class="half">
             <h1>&lt; Professora do Ensino Médio Profissionalizante  </br> de Desenvolvimento de Sistemas /&gt</h1>
@@ -33,3 +25,11 @@
 </body>
 
 </html>
+
+<script>
+  fetch("navbar.html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("header-placeholder").innerHTML = data; // Substitua 'header-placeholder' pelo ID de um elemento na sua página
+    });
+</script>

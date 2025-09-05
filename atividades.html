@@ -3,7 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="/styles/atividades.css" />
+    <link rel="stylesheet" href="/styles/navbar.css" />
+    <title>Atividades</title>
   </head>
-  <body></body>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <main class="container">
+      <h1>Minhas disciplinas</h1>
+
+      <div class="filters">
+        <button class="filter-btn">Em andamento</button>
+        <input type="text" placeholder="Buscar" class="search-box" />
+        <button class="sort-btn">⇅ Ordenar por nome da disciplina</button>
+      </div>
+
+      <div class="card-grid">
+        <div class="card">
+          <p>Árvore de Materiais – Técnico em Desenvolvimento de Sistemas</p>
+        </div>
+        <div class="card">
+          <p>
+            Carreira e Competências para o Mercado de Trabalho em
+            Desenvolvimento de Sistemas – 3º Bimestre
+          </p>
+        </div>
+        <div class="card">
+          <p>Lógica e Linguagem de Programação – 3º Bimestre</p>
+        </div>
+        <div class="card">
+          <p>Modelagem e Desenvolvimento de Banco de Dados – 3º Bimestre</p>
+        </div>
+        <div class="card">
+          <p>
+            Processos de Desenvolvimento de Software e Metodologias Ágeis – 3º
+            Bimestre
+          </p>
+        </div>
+        <div class="card">
+          <p>Programação Back-End – 3º Bimestre</p>
+        </div>
+        <div class="card">
+          <p>Programação Front-End – 3º Bimestre</p>
+        </div>
+        <div class="card">
+          <p>Programação Mobile – 3º Bimestre</p>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
+<script>
+  fetch("navbar.html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("header-placeholder").innerHTML = data; // Substitua 'header-placeholder' pelo ID de um elemento na sua página
+    });
+</script>
