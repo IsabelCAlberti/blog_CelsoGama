@@ -11,15 +11,15 @@ body {
     font-optical-sizing: auto;
     font-style: normal;
     margin: 0;
-    line-height: 1.6;
+    line-height: 1.5;
+    background-color: rgb(44, 42, 39);
 }
-
 
 /* LAYOUT */
 .container {
     display: flex;
     flex-direction: row;
-    margin-top: 16%;
+    margin-top: 14%;
     overflow: hidden;
 }
 
@@ -32,55 +32,41 @@ body {
     position: relative;
     padding: 20px;
     text-align: center;
-}
-
-.half h1 {
-    max-width: 900px;
-    color: #333;
-    text-align: center;
-    font-weight: bold;
-    font-size: 2em;
-    width: 38ch;
-    animation: typing 4s steps(38), pulse .5s step-end infinite alternate;
+    color: #efe1ec;
+    z-index: 5;
+    text-shadow: #b15c81;
+    font-size: 18px;
     white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid;
-    font-size: 16px;
-    font-family: monospace;
-    margin: 0, auto, auto, 20;
+    overflow:visible;
 }
 
-@keyframes typing {
-    from {
-        width: 0;
-    }
+spam {
+    color: #f115df;
+    text-shadow: #ffffff;
+    font-weight:bolder;
 }
 
-@keyframes pulse {
-    50% {
-        border-color: transparent;
-    }
+.profissao{
+    color: rgb(50, 223, 223);
 }
 
-.half p {
-    font-weight: 400;
-    font-size: 1.1em;
-    text-shadow: #333 0.5px 0.5px 1.5px;
+.materia{
+    color: #2b9b3a;
 }
 
 /* MÁSCARA */
-.designer-mask {
+/*.designer-mask {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(78deg, #d45eba, #d9bc5d, #f9c74f, #a0dc73, #577590);
+    background: linear-gradient(40deg, #efe1ec, #b14f4f, #5d383b, rgb(90, 23, 48), #852929);
     mix-blend-mode: multiply;
     z-index: 1;
     pointer-events: none;
-    /* não bloqueia cliques */
-}
+    /* não bloqueia cliques 
+}*/
 
 /* 📱 RESPONSIVIDADE */
 @media (max-width: 900px) {
