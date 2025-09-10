@@ -1,0 +1,59 @@
+/* Container principal */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 0;
+}
+
+/* Card Principal */
+.main-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #f4f6f8cc;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 50px;
+}
+
+.info h2 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.info .highlight {
+  color: #2ca4a0; /* cor azul esverdeada */
+}
+
+.info .role {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.bio {
+  font-size: 14px;
+  max-width: 700px;
+  text-align: justify;
+}
+
+/* Grade da Equipe */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.team-member img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.team-member img:hover {
+  filter: grayscale(0%);
+}
